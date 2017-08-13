@@ -1,0 +1,19 @@
+<table class="{{ include.class }}">
+    <thead>
+    {% for hash in site.data[{{include.data_src}}][0] %}
+        <th>{{hash[0]}}</th>
+    {% endfor %}
+    </thead>
+    {% for item in site.data[{{include.data_src}}] %}
+    <tr>
+        {% for hash in item %}
+        {% assign text = hash[1] %}
+        {% if text contains '#' %}
+        <td class="text-center"><a class="fa-stack" href="materials/{{ text | remove_first: '#' }}" target="__blank"><i class="fa fa-download fa-stack-1x"></i><i class="fa fa-square-o fa-stack-2x"></i></a></td>
+        {% else %}
+        <td>{% include default/ruby_wrapper.html chunk=text %}</td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

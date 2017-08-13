@@ -1,0 +1,20 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        {% unless page.relative_base %}{% include default/base_url.html %}{% endunless %}
+        {% include default/header_base.html %}
+        {% include default/css_base.html %}
+        {% include default/css_custom.html %}
+    </head>
+    <body>
+        {% include default/nav.html %}
+        {{ content }}
+        {% include default/js_base.html %}
+        {% include default/js_custom.html %}
+        {% include default/footer.html %}
+    </body>
+</html>
+{% include default/jpdyuki_sign.html %}

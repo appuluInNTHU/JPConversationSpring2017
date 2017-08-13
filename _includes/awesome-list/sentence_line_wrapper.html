@@ -1,0 +1,15 @@
+{% for item in site.data.awesome-list[{{include.data_src}}] %}
+{% assign i = forloop.index0 | plus: include.counter_base %}
+<div class="inline-flex-hor line">
+    <div class="lineno" id="L{{ i }}">
+        <a class="cp-ignore" href="#L{{ i }}">{{ item.index }}</a><br>
+        {% if item.ref contains '#' %}
+        {% assign ref_info = item.ref | remove_first: '#' | split: 'L' %}
+        {% assign article_id = ref_info[0] | plus: 0 %}
+        {% assign lineno = ref_info[1]%}
+        <div><a href="{{ page.relative_base }}{{ site.data.article_list[article_id].permalink }}#L{{ lineno }}"><i class="fa fa-fw fa-tag" aria-hidden="true"></i></a></div>
+        {% endif %}
+    </div>
+    <div class="sp-content elem-fill">{% include default/ruby_wrapper.html chunk=item.jp_content %}</div>
+</div>
+{% endfor %}

@@ -1,0 +1,7 @@
+{% for item in site.data.presentation[{{include.data_src}}] %}
+{% assign i = forloop.index %}
+<div class="inline-flex-hor line">
+    <div class="lineno" id="L{{ i }}"><a class="cp-ignore" href="{{ site.baseurl }}{{ page.permalink }}#L{{ i }}">{{ item.lineno }}</a></div>
+    <div class="sp-content elem-fill">{% include default/ruby_wrapper.html chunk=item.value %}</div>
+</div>
+{% endfor %}

@@ -1,0 +1,11 @@
+{% assign counter = 1 %}
+{% for hash in include.files %}
+    {% assign filename = hash[0] %}
+    <div class="inline-flex-hor" id="{{ filename }}">
+        <div class="lineno timeline-bg">&nbsp;&nbsp;&nbsp;</div>
+        <div class="timeline-content timeline-bg elem-fill"><span>{{ filename }}</span></div>
+    </div>
+    {% include awesome-list/sentence_line_wrapper.html data_src=filename counter_base=counter %}
+    {% assign current_added_ammount = hash[1] | size %}
+    {% assign counter = counter | plus: current_added_ammount %}
+{% endfor %}

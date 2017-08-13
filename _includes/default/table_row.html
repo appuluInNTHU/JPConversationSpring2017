@@ -1,0 +1,8 @@
+<table class="{{ include.class }}">
+    {% for item in site.data[{{include.data_src}}] %}
+    <tr>
+        <th class="col-sm-3 col-xs-2">{{ item.key }}</th>
+        <td class="col-sm-9 col-xs-10">{{ item.value }}</td>
+    </tr>
+    {% endfor %}
+</table>

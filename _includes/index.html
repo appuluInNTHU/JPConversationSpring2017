@@ -1,0 +1,30 @@
+<div id="banner-container" style="opacity:0;">
+    <div class="banner item photo1 bg h-100 hidden-xs" id="bg1"></div>
+    <div class="banner item photo2 bg pic-loading h-100 hidden-xs" id="bg2"></div>
+    <div class="banner item photo3 bg pic-loading h-100 hidden-xs" id="bg3"></div>
+    <div class="banner h-100 hidden-xs" id="banner-bg-mask"></div>
+    <div class="banner item photo1 main h-100" id="banner1"></div>
+    <div class="banner item photo2 main pic-loading h-100" id="banner2"></div>
+    <div class="banner item photo3 main pic-loading h-100" id="banner3"></div>
+    <div class="banner h-100" id="banner-mask"></div>
+</div>
+<div class="flex-ver align-bottom h-100 title">
+    <div class="elem-center flex-ver align-center text-center hidden-xs" id="more-wrapper" style="opacity:0;">
+        <a class="auto-scroll" id="more" href="#about"><i class="fa fa-angle-double-down fa-3x" aria-hidden="true"></i></a>
+    </div>
+    <div class="elem-end" id="title">
+        <h1 class="text-center hidden-xs"><span id="sc-title">清大</span>日語會話二 2017</h1>
+        <h2 class="text-center visible-xs">清大日語會話二 2017</h2>
+        <h5 class="text-center">アップル女王様の日本語会話教室</h5>
+        <div class="visible-xs">
+            <div class="flex-ver align-center text-center" id="more-wrapper-xs"><a class="auto-scroll" id="more" href="#about"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+        </div>
+    </div>
+</div>
+<div class="section flex-ver h-100 padding-top-default align-space-around" id="about">
+    {% include default/panel.html title='課程資訊' content_src='index/course_info_table.html' %}
+    {% include default/panel.html title='楊淑萍 老師' content_src='index/appulu_info_table.html' %}
+</div>
+<div class="section flex-hor padding-top-default align-center" id="schedule">
+    {% include default/panel.html bs_class='success' content_src='index/schedule_table.html' %}
+</div>

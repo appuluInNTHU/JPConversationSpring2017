@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.lineno{
+    border-right: #c2cbff solid 5px;
+}
+
+.timeline-bg{
+    background: #5b759e;
+}
+
+.timeline-content{
+    padding: 10px 20px;
+    line-height: 2.5em;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: "Rounded Mplus 1c", "MS Mincho", sans-serif;
+}
+
+.timeline-content>span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: -38px;
+    width: 31px;
+    height: 31px;
+    background: #c2cbff;
+    border-radius: 50%;
+}

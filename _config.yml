@@ -1,0 +1,15 @@
+baseurl: /JPConversationSpring2017
+css_path: styles/
+js_path: scripts/
+
+# Build settings
+markdown: kramdown
+compress_html:
+  clippings: all
+  comments: []
+  endings: [html, head, body, li, dt, dd, p, rt, optgroup, option, colgroup, caption, tr, td, th]
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: []

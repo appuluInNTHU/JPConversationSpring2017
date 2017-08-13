@@ -1,0 +1,11 @@
+
+{% if layout.script %}
+    {% for js_script in layout.script %}
+        <script type="text/javascript" src="{{ page.relative_base }}{{ site.js_path }}{{ js_script }}"></script>
+    {% endfor %}
+{% endif %}
+{% if page.script %}
+    {% for js_script in page.script %}
+        <script type="text/javascript" src="{{ page.relative_base }}{{ site.js_path }}{{ js_script }}"></script>
+    {% endfor %}
+{% endif %}

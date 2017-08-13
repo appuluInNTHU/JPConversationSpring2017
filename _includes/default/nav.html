@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container rwd-xs-limit" id="main-navbar">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" id="menu-button" type="button" data-toggle="collapse" data-target="#menu-item" aria-expanded="false">
+                &nbsp;Menu&nbsp;<i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp;
+            </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/"><strong>清大日語會話二 2017</strong></a>
+        </div>
+        <div class="collapse navbar-collapse" id="menu-item">
+            <ul class="nav navbar-nav">
+                <li><a class="auto-scroll" href="{{ page.relative_base }}#about"><span class="visible-xs-inline"><i class="fa fa-fw fa-info" aria-hidden="true"></i> </span>關於課程</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li {% if page.nav_schedule %}class="active"{% endif %}><a class="auto-scroll" href="{{ page.relative_base }}#schedule"><i class="fa fa-fw fa-file-text" aria-hidden="true"></i> 課程內容</a></li>
+                <li {% if page.nav_presentation %}class="active"{% endif %}><a href="{{ page.relative_base }}presentation"><i class="fa fa-fw fa-users" aria-hidden="true"></i> 個人發表</a></li>
+                <li {% if page.nav_awesome_list %}class="active"{% endif %}><a href="{{ page.relative_base }}awesome-list"><i class="fa fa-fw fa-list-ol" aria-hidden="true"></i> 必背句子</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

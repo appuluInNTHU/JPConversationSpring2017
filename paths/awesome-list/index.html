@@ -1,0 +1,39 @@
+---
+layout: article
+title: 必背句子
+description: 句子好長RRR (┛`д´)┛彡┻━┻ 
+nav_awesome_list: true
+style: [awesome-list.css]
+script: [awesome-list.js]
+relative_base: ../
+permalink: /awesome-list/
+---
+{% assign sorted_files = site.data.awesome-list | sort %}
+<div class="flex-hor align-center noruby"  id="article-container">
+    <div class="container rwd-xs-limit">
+        <div class="row">
+            <div class="col-sm-11 col-md-9 col-md-offset-1 col-xs-12 padding-hidden panel panel-default flex-ver align-center" id="sentence-panel">
+                <div class="panel-body">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-fw fa-cog" aria-hidden="true"></i><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="text-center"><input id="ruby-switch" type="checkbox">標示漢字拼音</input></li>
+                        </ul>
+                    </div>
+                </div>
+                {% include awesome-list/sentence_section.html files=sorted_files %}
+            </div>
+            <div class="col-sm-1 col-md-1 hidden-xs">
+                <nav class="side-navbar">
+                    <ul class="nav">
+                    {% for hash in sorted_files %}
+                        <li><a href="#{{ hash[0] }}">{{ hash[0] }}</a></li>
+                    {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<table class="{{ include.class }}">
+    <thead>
+    {% for hash in site.data[{{include.data_src}}][0] offset:1 %}
+        <th>{{ hash[0] }}</th>
+    {% endfor %}
+    </thead>
+    {% assign article_list = site.data.article_list %}
+    {% for item in site.data[{{include.data_src}}] %}
+    <tr {% if item.bs_class %}class="{{ item.bs_class }}"{% endif %}>
+    {% for hash in item offset:1 %}
+    {% if hash[1] contains '#' %}
+        <td><div class="flex-hor flex-wrap">
+        {% assign ids = hash[1] | split: ',' %}
+        {% for x in ids %}
+            {% assign id = x | remove_first: '#' | plus: 0 %}
+            {% assign article = article_list[id] %}
+            <div class="elem-fill"><a class="btn btn-default btn-block" href="{{ article.permalink }}" role="button"><span>{{ article.author }}</span><br><span class="text-danger">{{ article.title }}</span></a></div>
+        {% endfor %}
+        </div></td>
+    {% elsif hash[1] contains '(' %}
+        <td><div class="text-center">{{ hash[1] }}</div></td>
+    {% else %}
+        <td>{{ hash[1] }}</td>
+    {% endif %}
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,10 @@
+{% if layout.style %}
+    {% for stylesheet in layout.style %}
+        <link rel="stylesheet" href="{{ page.relative_base }}{{ site.css_path }}{{ stylesheet }}">
+    {% endfor %}
+{% endif %}
+{% if page.style %}
+    {% for stylesheet in page.style %}
+        <link rel="stylesheet" href="{{ page.relative_base }}{{ site.css_path }}{{ stylesheet }}">
+    {% endfor %}
+{% endif %}

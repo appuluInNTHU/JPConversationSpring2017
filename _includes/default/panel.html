@@ -1,0 +1,10 @@
+<div class="container rwd-lg-limit">
+    <div class="panel {% if include.bs_class %}panel-{{ include.bs_class }}{% else %}panel-default{% endif %}">
+        {% if include.title %}
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ include.title }}</h3>
+        </div>
+        {% endif %}
+        {% include {{ include.content_src }} %}
+    </div>
+</div>
