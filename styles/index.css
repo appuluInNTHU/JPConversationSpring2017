@@ -9,6 +9,10 @@ body {
     padding-top: 0px;
 }
 
+table ul{
+    margin-left: -20px;
+}
+
 .banner {
     width: 100%;
     min-height: 600px;
@@ -69,6 +73,12 @@ body {
     background: rgba(255, 255, 255, 0.6);
 }
 
+.section table tr>td:first-child {
+    vertical-align: top;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
 .title {
     position: relative;
     z-index: 6;
@@ -90,7 +100,7 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    background: rgb(184, 140, 239);
+    background: #b88cef;
     transition: all 1s linear;
     animation-name: twinkle;
     animation-duration: 1s;
@@ -138,8 +148,8 @@ body {
 }
 
 @media screen and (max-width: 767px){
-    .container{
-        width: 90%;
+    body{
+        background: #dfd9ff;
     }
 
     .pic-loading{
@@ -157,6 +167,10 @@ body {
 
     #about{
        min-height: 850px;
+    }
+
+    #about .btn{
+        width: 100%;
     }
 
     #title{

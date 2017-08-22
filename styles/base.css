@@ -104,6 +104,12 @@ rt::-moz-selection {
     color: #ddd5fb;
 }
 
+@media screen and (max-width: 767px){
+    #footer {
+        font-size: 9px;
+    }
+}
+
 /* nav.css */
 .navbar-default {
     background-color: #e0f6f9;
@@ -178,6 +184,12 @@ rt::-moz-selection {
 
 #main-navbar {
     text-align: center;
+}
+
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        height: 60px;
+    }
 }
 
 /* flex.css */
