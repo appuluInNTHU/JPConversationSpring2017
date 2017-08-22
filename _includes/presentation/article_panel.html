@@ -5,20 +5,8 @@
                 <h3 class="panel-title article-title">{{ page.title }}</h3>
                 <h3 class="panel-title pull-right">{{ page.author }}</h3>
             </div>
-            <div class="flex-hor panel-body">
-                <div class="elem-fill flex-hor align-space-around">
-                    {% assign article_list = site.data.article_list %}
-                    {% if page.article_id > 0 %}
-                        {% assign x = page.article_id | minus: 1 %}
-                        {% assign prev_a = article_list[x] %}
-                    {% endif %}
-                    {% if page.article_id < 28 %}
-                        {% assign x = page.article_id | plus: 1 %}
-                        {% assign next_a = article_list[x] %}
-                    {% endif %}
-                    <a class="btn btn-default btn-sm btn-pager {% unless prev_a %}disabled{% endunless %}" href="{% if prev_a %}{{ prev_a.permalink }}{% else %}{{ page.permalink }}#{% endif %}" data-toggle="tooltip" data-placement="bottom" title="{% if prev_a %}{{prev_a.title}}{% else %}--{% endif %}"><i class="fa fa-fw fa-angle-double-left" aria-hidden="true"></i>Previous&nbsp;</a>
-                    <a class="btn btn-default btn-sm btn-pager {% unless next_a %}disabled{% endunless %}" href="{% if next_a %}{{ next_a.permalink }}{% else %}{{ page.permalink }}#{% endif %}" data-toggle="tooltip" data-placement="bottom" title="{% if next_a %}{{next_a.title}}{% else %}--{% endif %}">&nbsp;Next<i class="fa fa-fw fa-angle-double-right" aria-hidden="true"></i></a>
-                </div>
+            <div class="flex-hor panel-body bottom-dash-border">
+                {% include presentation/pager.html %}
                 <div class="btn-group pull-right">
                     <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-fw fa-cog" aria-hidden="true"></i><span class="caret"></span>
@@ -29,6 +17,9 @@
                 </div>
             </div>
             {% include presentation/article_line_wrapper.html data_src=include.data_src %}
+            <div class="flex-hor panel-body upper-dash-border">
+                {% include presentation/pager.html %}
+            </div>
         </div>
     </div>
 </div>

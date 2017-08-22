@@ -186,9 +186,31 @@ rt::-moz-selection {
     text-align: center;
 }
 
+#btn-top{
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    color: #799c95;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.7s cubic-bezier(0, 0.55, 0.58, 1);
+}
+
 @media screen and (max-width: 767px){
     .navbar-brand{
         height: 60px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    #btn-top{
+        right: 5px;
+    }
+
+    #btn-top .fa-angle-up{
+        color: #fff;
     }
 }
 
@@ -264,6 +286,14 @@ table tr>td:first-child {
     text-align: center;
 }
 
+.upper-dash-border{
+    border-top: #a0a0a0 dashed 1px;
+}
+
+.bottom-dash-border{
+    border-bottom: #a0a0a0 dashed 1px;
+}
+
 .panel {
     background-color: rgba(239, 254, 255, 0.72);
 }
@@ -280,9 +310,8 @@ table tr>td:first-child {
 }
 
 .panel-body{
-    padding: 2px;
+    padding: 5px;
     background: #eaeaea;
-    border-bottom: #a0a0a0 dashed 1px;
 }
 
 .table-hover>tbody>tr:hover {
