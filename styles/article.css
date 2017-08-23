@@ -91,3 +91,15 @@ a:hover{
 .noruby ruby rt{
     display: none;
 }
+
+#ext-link{
+    position: absolute;
+    z-index: 9999;
+    transition: all 0.2s linear;
+}
+
+@media screen and (max-width: 767px){
+    #ext-link {
+        display: none;
+    }
+}
