@@ -160,6 +160,10 @@ table ul{
         opacity: 0;
         filter: none;
     }
+    
+    .container{
+        width: 90%;
+    }
 
     .banner{
         min-height: 400px;

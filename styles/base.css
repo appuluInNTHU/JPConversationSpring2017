@@ -188,7 +188,7 @@ rt::-moz-selection {
 
 #btn-top{
     position: fixed;
-    bottom: 70px;
+    bottom: 65px;
     right: 50px;
     color: #799c95;
     z-index: 50;
@@ -199,10 +199,6 @@ rt::-moz-selection {
 @media screen and (max-width: 767px){
     .navbar-brand{
         height: 60px;
-    }
-
-    .container{
-        width: 90%;
     }
 
     #btn-top{
