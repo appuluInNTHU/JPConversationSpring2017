@@ -51,7 +51,8 @@ a:hover{
 }
 
 .line:hover>.sp-content{
-    background: #cef1dc;
+    background: rgba(205, 216, 232, 0.5);
+    color: #4d658a;
 }
 
 .lineno:target, .line:hover>.lineno:target{

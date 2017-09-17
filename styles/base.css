@@ -169,7 +169,7 @@ rt::-moz-selection {
 }
 
 .side-navbar .nav>li>a:hover {
-    background-color: #ccfbd8;
+    background-color: rgba(251, 255, 234, 0.6);
 }
 
 .side-navbar .nav>li>a:hover, .side-navbar .nav>.active:focus>a, .side-navbar .nav>.active:hover>a, .side-navbar .nav>.active>a {
@@ -274,7 +274,7 @@ table>thead>tr>th {
 }
 
 table>tbody>tr>th {
-    text-align: right;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -291,7 +291,7 @@ table tr>td:first-child {
 }
 
 .panel {
-    background-color: rgba(239, 254, 255, 0.72);
+    background-color: #f3ffff;
 }
 
 .panel-default {

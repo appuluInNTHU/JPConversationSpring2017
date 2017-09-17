@@ -4,6 +4,7 @@ function collapse_menu(){
 
 function update_boundary(){
     _scrollTop_Max = $(document).height() - $(window).height() - 100;
+    _scrollTop_Max = (_scrollTop_Max < 0) ? 0 : _scrollTop_Max;
     toggle_btn_top();
 }
 
