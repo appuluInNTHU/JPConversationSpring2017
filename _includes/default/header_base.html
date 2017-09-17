@@ -1,8 +1,16 @@
-{% include default/title.html %}
+<title>{% include default/title.html %}</title>
 <meta charset="UTF-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="google" content="notranslate">
-<meta property="og:url" content="">
-<meta property="og:title" content="清大日語會話二 2017{% if page.nav_presentation %} 個人發表{% endif %} - {{ page.title }}">
+<meta name="description" content="{{ page.description }}">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta itemprop="name" content="{% include default/title.html %}">
+<meta itemprop="description" content="{{ page.description }}">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:title" content="{% include default/title.html %}">
 <meta property="og:description" content="{{ page.description }}">
+<meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta name="twitter:title" content="{% include default/title.html %}">
+<meta name="twitter:description" content="{{ page.description }}">

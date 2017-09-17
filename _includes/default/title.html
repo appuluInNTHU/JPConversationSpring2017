@@ -1,5 +1,1 @@
-{% if page.nav_presentation %}
-<title>{{ page.title | prepend: '個人發表 - '}} | 清大日語會話二 2017</title>
-{% else %}
-<title>{{ page.title }} | 清大日語會話二 2017</title>
-{% endif %}
+{% if page.nav_presentation %}{% if page.author %}{{ page.author }} - {% else %}個人發表 - {% endif %}{% endif %}{{ page.title }} | 清大日語會話二 2017
