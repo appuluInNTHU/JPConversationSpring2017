@@ -1,2 +1,1 @@
-{% assign org_str = include.chunk | split: "*" %}
-{% for item in org_str %}{% if item contains '(' %}<ruby>{{ item | replace: '(', '<rp>(</rp><rt>' | replace: ')', '</rt><rp>)</rp>' }}</ruby>{% else %}{{ item }}{% endif %}{% endfor %}
+{% assign org_str = include.chunk | split: "*" %}{% for item in org_str %}{% if item contains '(' %}<ruby>{{ item | replace: '(', '<rp>(</rp><rt>' | replace: ')', '</rt><rp>)</rp>' }}</ruby>{% else %}{{ item }}{% endif %}{% endfor %}

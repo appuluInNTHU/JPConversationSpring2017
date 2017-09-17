@@ -1,0 +1,1 @@
+{% for item in site.data.awesome-list[{{include.data_src}}] %}{% assign i = forloop.index0 %}"{% include default/ruby_wrapper.html chunk=item.jp_hint %}",{% endfor %}
